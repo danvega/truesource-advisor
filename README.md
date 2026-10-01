@@ -2,6 +2,8 @@
 
 One Spring Boot order service, with its before and after states on Git branches. Run Maven and Broadcom Application Advisor directly in the terminal during the recording.
 
+The application and tests use the Java package `com.Broadcom`, which also matches the Maven group ID. Historical rehearsal evidence retains the earlier `example.truesource` namespace.
+
 ## Branches
 
 | Branch | What it shows |

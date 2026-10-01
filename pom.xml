@@ -7,7 +7,7 @@
     <version>3.5.0</version>
     <relativePath/>
   </parent>
-  <groupId>example.truesource</groupId>
+  <groupId>com.Broadcom</groupId>
   <artifactId>orders-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Historical dependency remediation demo</name>

@@ -18,7 +18,7 @@ The portfolio positioning is based on the provided product brief. Confirm final 
 
 ## 3. Establish the application baseline
 
-Open `pom.xml`, the order controller, and the two HTTP tests. Show Boot 3.5.0 on `codex/advisor-before`, then create a new recording branch and run `mvn clean verify`.
+Open `pom.xml`, the order controller, and the two HTTP tests. Show Boot 3.5.0 on `advisor-before`, then create a new recording branch and run `mvn clean verify`.
 
 Suggested narration: “Here's a small service with two checks for the behavior we care about in this example. Before touching the dependencies, I want to know the starting point works.”
 
@@ -38,7 +38,7 @@ Suggested narration: “The changes are visible and reviewable. These checks sti
 
 ## 6. Show a commercial fix as a separate example
 
-Show the September 2025 Spring security announcement. Label the segment “Historical commercial hotfix example.” Switch between `codex/commercial-before` and `codex/commercial-after`, show the one-line parent diff, and show Framework 6.1.22 changing to 6.1.23 in the dependency trees. Run the tests on the after branch. The README has all commands.
+Show the September 2025 Spring security announcement. Label the segment “Historical commercial hotfix example.” Switch between `commercial-before` and `commercial-after`, show the one-line parent diff, and show Framework 6.1.22 changing to 6.1.23 in the dependency trees. Run the tests on the after branch. The README has all commands.
 
 Suggested narration: “Separately, here's a published example of a commercial hotfix. The Boot release line stays at 3.3, while its managed Framework version changes. I'm consuming that fix from the enterprise repository and testing the application against it.”
 

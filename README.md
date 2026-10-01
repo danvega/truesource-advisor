@@ -9,10 +9,10 @@ The application and tests use the Java package `com.Broadcom`, which also matche
 | Branch | What it shows |
 | --- | --- |
 | `main` | Starting application: Boot 3.5.0 |
-| `codex/advisor-before` | Same starting application, ready for a live Advisor run |
-| `codex/advisor-after` | Saved result produced by `advisor patch apply`: Boot 3.5.17 |
-| `codex/commercial-before` | Historical commercial example: Boot 3.3.15 |
-| `codex/commercial-after` | Same application using commercial hotfix Boot 3.3.15.1 |
+| `advisor-before` | Same starting application, ready for a live Advisor run |
+| `advisor-after` | Saved result produced by `advisor patch apply`: Boot 3.5.17 |
+| `commercial-before` | Historical commercial example: Boot 3.3.15 |
+| `commercial-after` | Same application using commercial hotfix Boot 3.3.15.1 |
 
 Every branch has `pom.xml` and `src/` at the repository root. Application source and tests stay the same; dependency changes live in the POM. There is no remote configured.
 
@@ -39,8 +39,8 @@ Start a new branch for each take; choose a new name when repeating the recording
 
 ```bash
 cd ~/Downloads/truesource-advisor
-git switch codex/advisor-before
-git switch -c codex/recording-take-1
+git switch advisor-before
+git switch -c recording-take-1
 mvn clean verify
 advisor build-config get
 advisor upgrade-plan get
@@ -73,8 +73,8 @@ Advisor's generated reports live in ignored `.advisor/`. Build output lives in i
 ## Inspect the saved Advisor result
 
 ```bash
-git diff codex/advisor-before..codex/advisor-after -- pom.xml
-git switch codex/advisor-after
+git diff advisor-before..advisor-after -- pom.xml
+git switch advisor-after
 mvn clean verify
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.6.1:tree '-Dincludes=org.springframework:*,org.apache.tomcat.embed:*'
 ```
@@ -86,11 +86,11 @@ The saved rehearsal changed Boot 3.5.0 to 3.5.17, Framework 6.2.7 to 6.2.20, and
 This is a separate example of consuming a commercial fix. Its parent version was changed explicitly; it is not the result of the Advisor run above.
 
 ```bash
-git switch codex/commercial-before
+git switch commercial-before
 mvn clean verify
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.6.1:tree '-Dincludes=org.springframework:*,org.apache.tomcat.embed:*'
-git diff codex/commercial-before..codex/commercial-after -- pom.xml
-git switch codex/commercial-after
+git diff commercial-before..commercial-after -- pom.xml
+git switch commercial-after
 mvn clean verify
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.6.1:tree '-Dincludes=org.springframework:*,org.apache.tomcat.embed:*'
 java -jar target/orders-demo-0.0.1-SNAPSHOT.jar --server.port=18080

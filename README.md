@@ -16,14 +16,18 @@ Every branch has `pom.xml` and `src/` at the repository root. Application source
 
 ## Prerequisites
 
-Use Java 17 or 21, Maven, and installed Application Advisor. The rehearsal used Java 21 and Advisor 1.6.7. On this Mac, select Java 21 in your terminal with:
+The project compiles for Java 21, and Maven requires JDK 21. `.sdkmanrc` selects the installed `21.0.6-oracle` used for this rehearsal; the Maven check accepts any JDK 21 patch release. Use Maven and installed Application Advisor (the rehearsal used 1.6.7). Select the project JDK in your terminal with:
 
 ```bash
-sdk use java 21.0.6-oracle
+cd ~/Downloads/truesource-advisor
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk env
 java -version
 mvn -version
 advisor --version
 ```
+
+In IntelliJ, use JDK 21 as the Project SDK and Maven runner JRE, then reload the root `pom.xml`.
 
 Maven uses your existing external `~/.m2/settings.xml`. Its server ID must match `spring-enterprise` in the POM. Keep repository credentials outside this repo and off screen.
 

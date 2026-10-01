@@ -1,0 +1,24 @@
+Resolving the build configuration of [project].
+
+
+🏃 [ 1 / 6 ] Resolving build tool version [00m 00s]
+🏃 [ 1 / 6 ] Resolving build tool version [00m 01s] ok
+
+🏃 [ 2 / 6 ] Resolving dependencies with mvn [00m 00s]
+🏃 [ 2 / 6 ] Resolving dependencies with mvn [00m 01s]
+🏃 [ 2 / 6 ] Resolving dependencies with mvn [00m 02s] ok
+
+🏃 [ 3 / 6 ] Resolving JDK version [00m 00s]
+🏃 [ 3 / 6 ] Resolving JDK version [00m 01s]
+🏃 [ 3 / 6 ] Resolving JDK version [00m 02s] ok
+
+🏃 [ 4 / 6 ] Resolving Git repository [00m 00s]
+🏃 [ 4 / 6 ] Resolving Git repository [00m 01s] ok
+
+🏃 [ 5 / 6 ] Resolving application modules [00m 00s]
+🏃 [ 5 / 6 ] Resolving application modules [00m 01s] ok
+
+🏃 [ 6 / 6 ] Obtaining dependency management artifacts [00m 00s]
+🏃 [ 6 / 6 ] Obtaining dependency management artifacts [00m 01s] ok
+
+🚀 The build-configuration has been generated in [project]/target/.advisor/build-config.json

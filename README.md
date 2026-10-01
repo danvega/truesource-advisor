@@ -8,7 +8,7 @@ One Spring Boot order service, with its before and after states on Git branches.
 | --- | --- |
 | `main` | Starting application: Boot 3.5.0 |
 | `codex/advisor-before` | Same starting application, ready for a live Advisor run |
-| `codex/advisor-after` | Saved result produced by `advisor patch apply`: Boot 3.5.16 |
+| `codex/advisor-after` | Saved result produced by `advisor patch apply`: Boot 3.5.17 |
 | `codex/commercial-before` | Historical commercial example: Boot 3.3.15 |
 | `codex/commercial-after` | Same application using commercial hotfix Boot 3.3.15.1 |
 
@@ -73,7 +73,7 @@ mvn clean verify
 mvn org.apache.maven.plugins:maven-dependency-plugin:3.6.1:tree '-Dincludes=org.springframework:*,org.apache.tomcat.embed:*'
 ```
 
-The saved rehearsal changed Boot 3.5.0 to 3.5.16, Framework 6.2.7 to 6.2.19, and Tomcat 10.1.41 to 10.1.60. Advisor reported 41 dependency updates in one POM, including an Awaitility change from 4.3.0 to 4.2.2. Review the complete diff: this is a broader dependency patching example, and every reported update is not necessarily a version increase or security fix.
+The saved rehearsal changed Boot 3.5.0 to 3.5.17, Framework 6.2.7 to 6.2.20, and Tomcat 10.1.41 to 10.1.60. Advisor reported 41 dependency updates in one POM, including an Awaitility change from 4.3.0 to 4.2.2. Review the complete diff: this is a broader dependency patching example, and every reported update is not necessarily a version increase or security fix.
 
 ## Historical commercial hotfix walkthrough
 
@@ -96,7 +96,7 @@ The only POM change between the commercial branches is Boot 3.3.15 to 3.3.15.1. 
 
 ## Evidence
 
-`docs/evidence/` contains sanitized results from the initial rehearsal, including dependency trees, test output, Advisor changes, and commercial repository-origin records. Some log paths and diff labels refer to the earlier folder layout. `docs/evidence/repo-rehearsal.json` records the subsequent checks in this branch-based repo.
+`docs/evidence/` contains sanitized results from the initial rehearsal, including dependency trees, test output, Advisor changes, and commercial repository-origin records. The original rehearsal used Boot 3.5.16; the new run selected 3.5.17. Files prefixed with `repo-` capture the current branch-based rehearsal. Other log paths and diff labels refer to the earlier folder layout. `docs/evidence/repo-rehearsal.json` records the subsequent checks in this branch-based repo.
 
 The two HTTP tests check the expected order response and the unknown-order 404. They do not establish every application behavior or reproduce a security exploit. Fresh Maven resolution established enterprise sourcing for the commercial parent, BOM and selected Framework artifacts; it did not verify SLSA provenance.
 

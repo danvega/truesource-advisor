@@ -1,0 +1,254 @@
+{
+  "pom.xml": {
+    "compile": [
+      {
+        "coordinate": "ch.qos.logback:logback-classic",
+        "oldVersion": "1.5.18",
+        "newVersion": "1.5.38",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "ch.qos.logback:logback-core",
+        "oldVersion": "1.5.18",
+        "newVersion": "1.5.38",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "com.fasterxml.jackson.core:jackson-annotations",
+        "oldVersion": "2.19.0",
+        "newVersion": "2.21",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "com.fasterxml.jackson.core:jackson-core",
+        "oldVersion": "2.19.0",
+        "newVersion": "2.21.7",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+        "oldVersion": "2.19.0",
+        "newVersion": "2.21.7",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
+        "oldVersion": "2.19.0",
+        "newVersion": "2.21.7",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+        "oldVersion": "2.19.0",
+        "newVersion": "2.21.7",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "com.fasterxml.jackson.module:jackson-module-parameter-names",
+        "oldVersion": "2.19.0",
+        "newVersion": "2.21.7",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "io.micrometer:micrometer-commons",
+        "oldVersion": "1.15.0",
+        "newVersion": "1.15.13",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "io.micrometer:micrometer-observation",
+        "oldVersion": "1.15.0",
+        "newVersion": "1.15.13",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.apache.tomcat.embed:tomcat-embed-core",
+        "oldVersion": "10.1.41",
+        "newVersion": "10.1.60",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.apache.tomcat.embed:tomcat-embed-el",
+        "oldVersion": "10.1.41",
+        "newVersion": "10.1.60",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.apache.tomcat.embed:tomcat-embed-websocket",
+        "oldVersion": "10.1.41",
+        "newVersion": "10.1.60",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.slf4j:jul-to-slf4j",
+        "oldVersion": "2.0.17",
+        "newVersion": "2.0.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.slf4j:slf4j-api",
+        "oldVersion": "2.0.17",
+        "newVersion": "2.0.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-autoconfigure",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-starter",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-starter-json",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-starter-logging",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-starter-tomcat",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-starter-web",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-aop",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-beans",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-context",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-core",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-expression",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-jcl",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-web",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      },
+      {
+        "coordinate": "org.springframework:spring-webmvc",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "compile"
+      }
+    ],
+    "test": [
+      {
+        "coordinate": "jakarta.activation:jakarta.activation-api",
+        "oldVersion": "2.1.3",
+        "newVersion": "2.1.4",
+        "scope": "test"
+      },
+      {
+        "coordinate": "jakarta.xml.bind:jakarta.xml.bind-api",
+        "oldVersion": "4.0.2",
+        "newVersion": "4.0.5",
+        "scope": "test"
+      },
+      {
+        "coordinate": "net.bytebuddy:byte-buddy",
+        "oldVersion": "1.17.5",
+        "newVersion": "1.17.8",
+        "scope": "test"
+      },
+      {
+        "coordinate": "net.bytebuddy:byte-buddy-agent",
+        "oldVersion": "1.17.5",
+        "newVersion": "1.17.8",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.assertj:assertj-core",
+        "oldVersion": "3.27.3",
+        "newVersion": "3.27.7",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.awaitility:awaitility",
+        "oldVersion": "4.3.0",
+        "newVersion": "4.2.2",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-starter-test",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-test",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.springframework.boot:spring-boot-test-autoconfigure",
+        "oldVersion": "3.5.0",
+        "newVersion": "3.5.17",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.springframework:spring-test",
+        "oldVersion": "6.2.7",
+        "newVersion": "6.2.20",
+        "scope": "test"
+      },
+      {
+        "coordinate": "org.xmlunit:xmlunit-core",
+        "oldVersion": "2.10.1",
+        "newVersion": "2.10.4",
+        "scope": "test"
+      }
+    ]
+  }
+}

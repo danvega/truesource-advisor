@@ -1,0 +1,29 @@
+{
+  "rehearsal_date": "2026-10-01",
+  "advisor_version": "1.6.7",
+  "java_version": "21.0.6",
+  "before": {
+    "spring_boot": "3.5.0",
+    "spring_framework": "6.2.7",
+    "tomcat": "10.1.41"
+  },
+  "after": {
+    "spring_boot": "3.5.16",
+    "spring_framework": "6.2.19",
+    "tomcat": "10.1.60"
+  },
+  "advisor_result": "Reported 41 dependency updates in one POM. Includes multiple library changes; this is not a CVE-only patch.",
+  "tests": "Both before and after builds passed two HTTP contract tests.",
+  "review_note": "The reported dependency changes include Awaitility 4.3.0 to 4.2.2. Review the full diff and resolved dependency tree rather than assuming all version changes are increases.",
+  "repository_access": "Fresh Maven resolution of enterprise-only Boot 3.3.15.1 succeeded after the token update. Both commercial application builds passed their HTTP tests.",
+  "commercial_hotfix": {
+    "before_boot": "3.3.15",
+    "after_boot": "3.3.15.1",
+    "before_framework": "6.1.22",
+    "after_framework": "6.1.23",
+    "tomcat_before_and_after": "10.1.44",
+    "tests": "Two HTTP tests passed for each build.",
+    "scope": "Historical commercial hotfix published September 15 2025. Applied by changing the Boot parent, separately from the Advisor patch rehearsal. No method-security exploit reproduced."
+  },
+  "security_scope": "Tomcat 10.1.41 falls in the affected version range for CVE-2025-48988; 10.1.60 is newer than its published fix. This sample has no multipart upload endpoint and does not establish application exploitability or reproduce the flaw."
+}

@@ -1,4 +1,4 @@
-package com.Broadcom;
+package com.broadcom;
 
 import java.util.Map;
 import org.junit.jupiter.api.Test;

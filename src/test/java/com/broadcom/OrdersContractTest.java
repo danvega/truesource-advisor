@@ -1,6 +1,6 @@
 package com.broadcom;
 
-import java.util.Map;
+import com.broadcom.OrdersController.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,10 +14,9 @@ class OrdersContractTest {
 
     @Test
     void returnsTheExpectedOrderContractOverHttp() {
-        var response = client.getForEntity("/api/orders/1001", Map.class);
+        var response = client.getForEntity("/api/orders/1001", Order.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).containsExactlyInAnyOrderEntriesOf(
-                Map.of("id", "1001", "total", "42.00", "currency", "USD"));
+        assertThat(response.getBody()).isEqualTo(new Order("1001", "42.00", "USD"));
     }
 
     @Test

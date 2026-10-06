@@ -4,14 +4,18 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.5.0</version>
+    <version>3.5.16</version>
     <relativePath/>
   </parent>
   <groupId>com.broadcom</groupId>
   <artifactId>orders-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Historical dependency remediation demo</name>
-  <properties><java.version>21</java.version></properties>
+  <name>Orders demo</name>
+
+  <properties>
+    <java.version>21</java.version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -25,29 +29,39 @@
   </dependencies>
 
   <repositories>
-    <repository><id>spring-enterprise</id><url>https://packages.broadcom.com/artifactory/spring-enterprise</url></repository>
+    <repository>
+      <id>spring-enterprise</id>
+      <url>https://packages.broadcom.com/artifactory/spring-enterprise</url>
+    </repository>
   </repositories>
-  <build><plugins>
-    <plugin><groupId>org.springframework.boot</groupId><artifactId>spring-boot-maven-plugin</artifactId></plugin>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-enforcer-plugin</artifactId>
-      <version>3.6.3</version>
-      <executions>
-        <execution>
-          <id>require-jdk-21</id>
-          <phase>validate</phase>
-          <goals><goal>enforce</goal></goals>
-          <configuration>
-            <rules>
-              <requireJavaVersion>
-                <version>[21,22)</version>
-                <message>Use JDK 21 for this demo. Run sdk env from the project directory.</message>
-              </requireJavaVersion>
-            </rules>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
-  </plugins></build>
+
+  <build>
+    <finalName>orders-demo</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>require-jdk-21</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>[21,22)</version>
+                  <message>Use JDK 21 for this demo. Run sdk env from the project directory.</message>
+                </requireJavaVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

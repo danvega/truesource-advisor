@@ -6,3 +6,5 @@ out/
 .DS_Store
 .maven-cache/
 settings.xml
+/demo.md
+/video-plan.md

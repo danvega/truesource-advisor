@@ -6,7 +6,7 @@ A small Spring Boot order service that shows how to take an enterprise-only Spri
 
 Spring Boot 3.5 left open-source support in June 2026. The last open-source releases are Boot 3.5.16 and Spring Framework 6.2.19.
 
-On August 20, 2026, Spring published a batch of Spring Framework advisories. For the 6.2 line, the fixed version is **6.2.20, Enterprise Support Only**. One example is [CVE-2026-59281](https://spring.io/security/cve-2026-59281). Spring Enterprise supplies that fix. Application Advisor applies it to the build.
+In August 2026, Spring published a batch of Spring Framework advisories. For the 6.2 line, the fixed version is **6.2.20, Enterprise Support Only**. One example is [CVE-2026-59281](https://spring.io/security/cve-2026-59281). Spring Enterprise supplies that fix. Application Advisor applies it to the build.
 
 This app does not use the features those advisories describe. The demo shows how a fix gets into an application, not an exploit.
 
@@ -107,7 +107,7 @@ You should get a 200 with `{"id":"1001","total":"42.00","currency":"USD"}`, then
 
 ## What changed
 
-The recorded run on October 6, 2026 reported 33 dependency changes in one file:
+The recorded run reported 33 dependency changes in one file:
 
 | Dependency | Before | After |
 | --- | --- | --- |

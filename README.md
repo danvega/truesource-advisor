@@ -10,6 +10,29 @@ On August 20, 2026, Spring published a batch of Spring Framework advisories. For
 
 This app does not use the features those advisories describe. The demo shows how a fix gets into an application, not an exploit.
 
+## Spring Enterprise and Application Advisor
+
+This demo uses two parts of TrueSource Spring Enterprise, from [TrueSource by Broadcom](https://www.broadcom.com/company/news/articles/vmware-explore/speed-is-the-problem-quality-early-access-truesource-broadcom).
+
+**Spring Enterprise** gives you supported Spring releases from the engineers who build Spring:
+
+- Patches for release lines that open source no longer covers, like Boot 3.5 here, with day 0 access to fixes.
+- The Spring Enterprise repository, a Maven repository your build pulls those releases from. In this demo it's the `spring-enterprise` repository in `pom.xml`.
+- 24x7 support for Spring, OpenJDK and Tomcat.
+
+**Application Advisor** gets those updates into your code:
+
+- `advisor patch apply` moves your dependencies to the latest patch releases on the lines you already run. This demo uses it.
+- `advisor upgrade-plan get` and `advisor upgrade-plan apply` plan and make a move to a newer release line, like Boot 4.
+- It can run in your CI pipeline and open pull requests. Your tests run on them, and your team reviews and merges them.
+
+Learn more:
+
+- [Spring Enterprise](https://enterprise.spring.io/)
+- [Application Advisor](https://enterprise.spring.io/spring-application-advisor) and its [documentation](https://techdocs.broadcom.com/tnz-spring-app-advisor)
+- [Hands-on Application Advisor guide](https://spring.academy/guides/app-advisor-intro) on Spring Academy
+- [Contact Broadcom](https://go-vmware.broadcom.com/contact-us) about access
+
 ## Branches
 
 | Branch | Boot | Framework | Purpose |
@@ -40,6 +63,12 @@ Check the baseline:
 ```bash
 mvn dependency:tree -Dincludes=org.springframework:spring-webmvc
 mvn clean verify
+```
+
+Optional: see what a full move to a newer release line would take. It only writes a plan into `target/`, so it doesn't change your code:
+
+```bash
+advisor upgrade-plan get
 ```
 
 Apply the patch updates:
